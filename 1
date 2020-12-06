@@ -34,10 +34,16 @@ Bouton.Text = "anti hostage"
 Bouton.TextColor3 = Color3.new(255, 1, 1)
 Bouton.TextSize = 14
 Bouton.MouseButton1Down:connect(function() 
-local newcclosure = newcclosure or function(f)
-return f
+while true do
+wait(0.01)
+T = game.Players:GetChildren()
+
+for i,v in pairs(T) do
+
+local a = v.Character
+game:GetService("Workspace").Events.Vampire.Escape:FireServer(a, "", "", true)
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/kirillka77734/roblox/main/2", true))()
+end
 end)
 Title.Name = "Title"
 Title.Parent = Backgroundgui
