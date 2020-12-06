@@ -10,7 +10,7 @@ local Bouton3 = Instance.new("TextButton")
 
 --Properties:
 GUI.Name = "GUI_SHEET"
-GUI.Parent = game:WaitForChild("CoreGui")
+GUI.Parent = game:GetService("Players").LocalPlayer.PlayerGui.ChatGui
 
 Backgroundgui.Name = "Backgroundgui"
 Backgroundgui.Parent = GUI
@@ -198,12 +198,12 @@ Bouton3.Text = " DELETE GUI "
 Bouton3.TextColor3 = Color3.new(1, 1, 1)
 Bouton3.TextSize = 14
 Bouton3.MouseButton1Down:connect(function() 
-game:GetService("CoreGui").GUI_SHEET:Destroy()
+game:GetService("Players").kykyshka78734.PlayerGui.ChatGui["GUI_SHEET"]:Destroy()
 end)
 
 -- Scripts:
 function SCRIPT_ZGRB82_FAKESCRIPT() -- GUI.LocalScript 
-	getfenv().script = Instance.new('CoreGui', GUI_SHEET)
+	getfenv().script = Instance.new('Chat_Gui', GUI_SHEET)
 
 	frame = script.Parent.Backgroundgui  --get the frame object
 	frame.Draggable = true  --set draggable to true
